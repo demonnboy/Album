@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="149" height="146"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="149" height="146"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wrC-Bg-EMN"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="相机胶卷" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR2-sh-3qQ">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUH-Y3-N2S">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wrC-Bg-EMN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ag5-X9-KFs"/>
+                <constraint firstItem="NUH-Y3-N2S" firstAttribute="width" secondItem="MR2-sh-3qQ" secondAttribute="width" id="Ckz-RJ-foU"/>
+                <constraint firstAttribute="trailing" secondItem="NUH-Y3-N2S" secondAttribute="trailing" id="Hth-LD-nzL"/>
+                <constraint firstAttribute="trailing" secondItem="wrC-Bg-EMN" secondAttribute="trailing" id="KkD-cS-yr6"/>
+                <constraint firstItem="NUH-Y3-N2S" firstAttribute="height" secondItem="MR2-sh-3qQ" secondAttribute="height" id="MNN-xt-AsG"/>
+                <constraint firstAttribute="trailing" secondItem="MR2-sh-3qQ" secondAttribute="trailing" id="NSX-ne-mNu"/>
+                <constraint firstItem="MR2-sh-3qQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OhI-SK-jPs"/>
+                <constraint firstItem="NUH-Y3-N2S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ojh-la-ofq"/>
+                <constraint firstItem="wrC-Bg-EMN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SMQ-HO-03q"/>
+                <constraint firstAttribute="bottom" secondItem="NUH-Y3-N2S" secondAttribute="bottom" id="a1G-mo-dmr"/>
+                <constraint firstItem="MR2-sh-3qQ" firstAttribute="top" secondItem="wrC-Bg-EMN" secondAttribute="bottom" constant="5" id="wjc-En-qh1"/>
+                <constraint firstAttribute="bottom" secondItem="wrC-Bg-EMN" secondAttribute="bottom" multiplier="4:3" id="yNB-lM-fk3"/>
+            </constraints>
+            <size key="customSize" width="149" height="146"/>
+            <connections>
+                <outlet property="albumCount" destination="NUH-Y3-N2S" id="xzW-QF-8SP"/>
+                <outlet property="albumImageView" destination="wrC-Bg-EMN" id="8yp-qC-VTt"/>
+                <outlet property="albumName" destination="MR2-sh-3qQ" id="aVM-En-WqP"/>
+            </connections>
+            <point key="canvasLocation" x="-102.5" y="-59"/>
+        </collectionViewCell>
+    </objects>
+</document>
