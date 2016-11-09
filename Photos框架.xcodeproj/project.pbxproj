@@ -15,7 +15,6 @@
 		138F1EAA1DD069C300F80526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138F1EA81DD069C300F80526 /* LaunchScreen.storyboard */; };
 		138F1EB51DD069C300F80526 /* Photos__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EB41DD069C300F80526 /* Photos__Tests.m */; };
 		138F1EC01DD069C300F80526 /* Photos__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EBF1DD069C300F80526 /* Photos__UITests.m */; };
-		13B862721DD2EFC900C2125A /* AlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8625F1DD2EFC900C2125A /* AlbumInfo.m */; };
 		13B862731DD2EFC900C2125A /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B862621DD2EFC900C2125A /* PhotoCollectionViewCell.m */; };
 		13B862741DD2EFC900C2125A /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B862631DD2EFC900C2125A /* PhotoCollectionViewCell.xib */; };
 		13B862751DD2EFC900C2125A /* SiglePhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B862651DD2EFC900C2125A /* SiglePhotoCollectionViewCell.m */; };
@@ -25,6 +24,7 @@
 		13B862791DD2EFC900C2125A /* DetailCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8626D1DD2EFC900C2125A /* DetailCollectionViewController.m */; };
 		13B8627A1DD2EFC900C2125A /* ParentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8626F1DD2EFC900C2125A /* ParentCollectionViewController.m */; };
 		13B8627B1DD2EFC900C2125A /* SingleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B862711DD2EFC900C2125A /* SingleCollectionViewController.m */; };
+		13B862811DD2F1E000C2125A /* AlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B862801DD2F1E000C2125A /* AlbumInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,6 @@
 		138F1EBB1DD069C300F80526 /* Photos框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photos框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138F1EBF1DD069C300F80526 /* Photos__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photos__UITests.m; sourceTree = "<group>"; };
 		138F1EC11DD069C300F80526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13B8625E1DD2EFC900C2125A /* AlbumInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumInfo.h; sourceTree = "<group>"; };
-		13B8625F1DD2EFC900C2125A /* AlbumInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumInfo.m; sourceTree = "<group>"; };
 		13B862611DD2EFC900C2125A /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		13B862621DD2EFC900C2125A /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		13B862631DD2EFC900C2125A /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		13B8626F1DD2EFC900C2125A /* ParentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentCollectionViewController.m; sourceTree = "<group>"; };
 		13B862701DD2EFC900C2125A /* SingleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCollectionViewController.h; sourceTree = "<group>"; };
 		13B862711DD2EFC900C2125A /* SingleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCollectionViewController.m; sourceTree = "<group>"; };
+		13B8627F1DD2F1E000C2125A /* AlbumInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumInfo.h; sourceTree = "<group>"; };
+		13B862801DD2F1E000C2125A /* AlbumInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,11 +172,10 @@
 		13B8625D1DD2EFC900C2125A /* Album */ = {
 			isa = PBXGroup;
 			children = (
-				13B8625E1DD2EFC900C2125A /* AlbumInfo.h */,
-				13B8625F1DD2EFC900C2125A /* AlbumInfo.m */,
-				13B862601DD2EFC900C2125A /* Cell */,
 				13B862671DD2EFC900C2125A /* PhotoManager.h */,
 				13B862681DD2EFC900C2125A /* PhotoManager.m */,
+				13B8627E1DD2F1E000C2125A /* Model */,
+				13B862601DD2EFC900C2125A /* Cell */,
 				13B862691DD2EFC900C2125A /* VC */,
 			);
 			path = Album;
@@ -208,6 +207,15 @@
 				13B862711DD2EFC900C2125A /* SingleCollectionViewController.m */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		13B8627E1DD2F1E000C2125A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13B8627F1DD2F1E000C2125A /* AlbumInfo.h */,
+				13B862801DD2F1E000C2125A /* AlbumInfo.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,11 +361,11 @@
 				13B8627B1DD2EFC900C2125A /* SingleCollectionViewController.m in Sources */,
 				138F1E9F1DD069C300F80526 /* AppDelegate.m in Sources */,
 				13B862751DD2EFC900C2125A /* SiglePhotoCollectionViewCell.m in Sources */,
+				13B862811DD2F1E000C2125A /* AlbumInfo.m in Sources */,
 				13B8627A1DD2EFC900C2125A /* ParentCollectionViewController.m in Sources */,
 				138F1E9C1DD069C300F80526 /* main.m in Sources */,
 				13B862731DD2EFC900C2125A /* PhotoCollectionViewCell.m in Sources */,
 				13B862781DD2EFC900C2125A /* AlbumCollectionViewController.m in Sources */,
-				13B862721DD2EFC900C2125A /* AlbumInfo.m in Sources */,
 				13B862791DD2EFC900C2125A /* DetailCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
