@@ -9,6 +9,7 @@
 #import "DetailCollectionViewController.h"
 #import "SiglePhotoCollectionViewCell.h"
 #import "SingleCollectionViewController.h"
+#import "PhotoManager.h"
 @interface DetailCollectionViewController ()<UICollectionViewDelegateFlowLayout>
 @property(strong, nonatomic) BottomView *bottomView;
 @property(strong, nonatomic) NSMutableArray *imagesArr;
@@ -83,7 +84,7 @@ static NSString * const reuseIdentifierID = @"CellID";
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:singleVC] animated:YES completion:nil];
      */
     
-    
+    //删除照片
     NSInteger index = 0;
     for (ImageModel *model in self.imagesArr) {
         if (model.indexPath.item == indexPath.item) {
@@ -93,6 +94,13 @@ static NSString * const reuseIdentifierID = @"CellID";
             break;
         }
     }
+    //限制照片数量
+    if (self.imagesArr.count >= [PhotoManager shareInstance].imageCount) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"至多选择%ld张照片",(long)[PhotoManager shareInstance].imageCount] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    //添加照片
     if (index == 0) {
         ImageModel *model = [[ImageModel alloc] init];
         model.indexPath = indexPath;

@@ -8,8 +8,8 @@
 
 #import "AlbumCollectionViewController.h"
 #import "PhotoCollectionViewCell.h"
-#import "PhotoManager.h"
 #import "DetailCollectionViewController.h"
+#import "PhotoManager.h"
 @interface AlbumCollectionViewController ()<UICollectionViewDelegateFlowLayout,DetailCollectionViewControllerDelegate>
 @property(strong, nonatomic) NSMutableArray<AlbumInfo *> *photoArray;
 @end

@@ -25,6 +25,7 @@
 - (IBAction)switchVC:(id)sender
 {
     [[PhotoManager shareInstance] pushPhotoVC:self delegate:self];
+    [PhotoManager shareInstance].imageCount = 3;
 }
 
 - (void)albumCollectionViewController:(AlbumCollectionViewController *)albumVC imageArray:(NSMutableArray<UIImage *> *)imagesArray

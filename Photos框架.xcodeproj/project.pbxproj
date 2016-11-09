@@ -197,12 +197,12 @@
 		13B862691DD2EFC900C2125A /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				13B8626E1DD2EFC900C2125A /* ParentCollectionViewController.h */,
+				13B8626F1DD2EFC900C2125A /* ParentCollectionViewController.m */,
 				13B8626A1DD2EFC900C2125A /* AlbumCollectionViewController.h */,
 				13B8626B1DD2EFC900C2125A /* AlbumCollectionViewController.m */,
 				13B8626C1DD2EFC900C2125A /* DetailCollectionViewController.h */,
 				13B8626D1DD2EFC900C2125A /* DetailCollectionViewController.m */,
-				13B8626E1DD2EFC900C2125A /* ParentCollectionViewController.h */,
-				13B8626F1DD2EFC900C2125A /* ParentCollectionViewController.m */,
 				13B862701DD2EFC900C2125A /* SingleCollectionViewController.h */,
 				13B862711DD2EFC900C2125A /* SingleCollectionViewController.m */,
 			);

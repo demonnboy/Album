@@ -13,6 +13,11 @@
 
 @property(strong, nonatomic) NSMutableArray<AlbumInfo *> *albumInfoArray;
 
+/**
+ 照片选择张数限制 默认是 9
+ */
+@property(assign, nonatomic) NSInteger imageCount;
+
 + (instancetype)shareInstance;
 
 /**

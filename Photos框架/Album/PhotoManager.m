@@ -23,6 +23,14 @@ static PhotoManager *manager;
     return manager;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.imageCount = 9;
+    }
+    return self;
+}
 
 - (void)getAlbumArray:(void(^)())success
 {
