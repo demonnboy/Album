@@ -7,5 +7,6 @@ version 1.0
 [[PhotoManager shareInstance] pushPhotoVC:self delegate:self];
 
 回调代理
-- (void)albumCollectionViewController:(AlbumCollectionViewController *)albumVC imageArray:(NSMutableArray<UIImage *> *)imagesArray;
+-(void)albumCollectionViewController:(AlbumCollectionViewController *)albumVC imageArray:(NSMutableArray<UIImage *> *)imagesArray;
+
 数组里面就是照片
