@@ -18,9 +18,7 @@ static NSString * const reuseIdentifierIDD = @"CellIDD";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.collectionView.showsHorizontalScrollIndicator = NO;
+        
     [self.collectionView registerClass:[SiglePhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifierIDD];
     [self.collectionView scrollToItemAtIndexPath:self.item atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     self.collectionView.pagingEnabled = YES;
@@ -32,12 +30,6 @@ static NSString * const reuseIdentifierIDD = @"CellIDD";
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -71,6 +63,12 @@ static NSString * const reuseIdentifierIDD = @"CellIDD";
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return 0;
+}
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

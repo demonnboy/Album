@@ -7,14 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kScreen [UIScreen mainScreen].bounds
+#import "ParentCollectionViewController.h"
 @class AlbumCollectionViewController;
 @protocol AlbumCollectionViewControllerDelegate <NSObject>
 
+@optional
 - (void)albumCollectionViewController:(AlbumCollectionViewController *)albumVC imageArray:(NSMutableArray<UIImage *> *)imagesArray;
 
 @end
 
-@interface AlbumCollectionViewController : UICollectionViewController
+@interface AlbumCollectionViewController : ParentCollectionViewController
 @property(assign, nonatomic) id<AlbumCollectionViewControllerDelegate>delegate;
 @end

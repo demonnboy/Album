@@ -15,7 +15,6 @@
 		138F1EAA1DD069C300F80526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138F1EA81DD069C300F80526 /* LaunchScreen.storyboard */; };
 		138F1EB51DD069C300F80526 /* Photos__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EB41DD069C300F80526 /* Photos__Tests.m */; };
 		138F1EC01DD069C300F80526 /* Photos__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EBF1DD069C300F80526 /* Photos__UITests.m */; };
-		138F1ECF1DD0766800F80526 /* PhotoAblumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1ECE1DD0766800F80526 /* PhotoAblumVC.m */; };
 		138F1ED21DD173A200F80526 /* AlbumCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1ED11DD173A200F80526 /* AlbumCollectionViewController.m */; };
 		138F1ED61DD179DB00F80526 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1ED41DD179DB00F80526 /* PhotoCollectionViewCell.m */; };
 		138F1ED71DD179DB00F80526 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138F1ED51DD179DB00F80526 /* PhotoCollectionViewCell.xib */; };
@@ -25,6 +24,7 @@
 		138F1EE41DD19C3500F80526 /* SiglePhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EE21DD19C3500F80526 /* SiglePhotoCollectionViewCell.m */; };
 		138F1EE51DD19C3500F80526 /* SiglePhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138F1EE31DD19C3500F80526 /* SiglePhotoCollectionViewCell.xib */; };
 		138F1EF01DD1B65100F80526 /* SingleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138F1EEF1DD1B65100F80526 /* SingleCollectionViewController.m */; };
+		13B8625C1DD2E1C400C2125A /* ParentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B8625B1DD2E1C400C2125A /* ParentCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,6 @@
 		138F1EBB1DD069C300F80526 /* Photos框架UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Photos框架UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		138F1EBF1DD069C300F80526 /* Photos__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Photos__UITests.m; sourceTree = "<group>"; };
 		138F1EC11DD069C300F80526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		138F1ECD1DD0766800F80526 /* PhotoAblumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAblumVC.h; sourceTree = "<group>"; };
-		138F1ECE1DD0766800F80526 /* PhotoAblumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAblumVC.m; sourceTree = "<group>"; };
 		138F1ED01DD173A200F80526 /* AlbumCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionViewController.h; sourceTree = "<group>"; };
 		138F1ED11DD173A200F80526 /* AlbumCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionViewController.m; sourceTree = "<group>"; };
 		138F1ED31DD179DB00F80526 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		138F1EE31DD19C3500F80526 /* SiglePhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SiglePhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		138F1EEE1DD1B65100F80526 /* SingleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCollectionViewController.h; sourceTree = "<group>"; };
 		138F1EEF1DD1B65100F80526 /* SingleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCollectionViewController.m; sourceTree = "<group>"; };
+		13B8625A1DD2E1C400C2125A /* ParentCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentCollectionViewController.h; path = ../ParentCollectionViewController.h; sourceTree = "<group>"; };
+		13B8625B1DD2E1C400C2125A /* ParentCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentCollectionViewController.m; path = ../ParentCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +133,10 @@
 				138F1E9E1DD069C300F80526 /* AppDelegate.m */,
 				138F1EA01DD069C300F80526 /* ViewController.h */,
 				138F1EA11DD069C300F80526 /* ViewController.m */,
-				138F1ECD1DD0766800F80526 /* PhotoAblumVC.h */,
-				138F1ECE1DD0766800F80526 /* PhotoAblumVC.m */,
 				138F1ED81DD17B6300F80526 /* PhotoManager.h */,
 				138F1ED91DD17B6300F80526 /* PhotoManager.m */,
+				13B8625A1DD2E1C400C2125A /* ParentCollectionViewController.h */,
+				13B8625B1DD2E1C400C2125A /* ParentCollectionViewController.m */,
 				138F1ED01DD173A200F80526 /* AlbumCollectionViewController.h */,
 				138F1ED11DD173A200F80526 /* AlbumCollectionViewController.m */,
 				138F1EDE1DD19BE500F80526 /* DetailCollectionViewController.h */,
@@ -328,9 +328,9 @@
 				138F1EDA1DD17B6300F80526 /* PhotoManager.m in Sources */,
 				138F1EF01DD1B65100F80526 /* SingleCollectionViewController.m in Sources */,
 				138F1ED61DD179DB00F80526 /* PhotoCollectionViewCell.m in Sources */,
+				13B8625C1DD2E1C400C2125A /* ParentCollectionViewController.m in Sources */,
 				138F1EDD1DD188F000F80526 /* AlbumInfo.m in Sources */,
 				138F1ED21DD173A200F80526 /* AlbumCollectionViewController.m in Sources */,
-				138F1ECF1DD0766800F80526 /* PhotoAblumVC.m in Sources */,
 				138F1EE41DD19C3500F80526 /* SiglePhotoCollectionViewCell.m in Sources */,
 				138F1E9F1DD069C300F80526 /* AppDelegate.m in Sources */,
 				138F1E9C1DD069C300F80526 /* main.m in Sources */,

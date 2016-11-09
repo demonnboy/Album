@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kScreen [UIScreen mainScreen].bounds
-@interface SingleCollectionViewController : UICollectionViewController
+#import "ParentCollectionViewController.h"
+
+@interface SingleCollectionViewController : ParentCollectionViewController
 
 @property(strong, nonatomic) NSMutableArray *albumArray;
 

@@ -21,9 +21,8 @@ static NSString * const reuseIdentifierID = @"CellID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.bottomView];
-    self.view.backgroundColor = [UIColor whiteColor];
     [self.collectionView setFrame:CGRectMake(0, 0, kScreen.size.width, kScreen.size.height - 50)];
-    self.collectionView.alwaysBounceVertical = YES;
+    
     self.title = self.albumInfo.albumName;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerClass:[SiglePhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifierID];
@@ -170,7 +169,7 @@ static NSString * const reuseIdentifierID = @"CellID";
 - (void)setSelectImageCount:(NSInteger )selectImageCount
 {
     _selectImageCount = selectImageCount;
-    self.selectImageLabel.text = [NSString stringWithFormat:@"    已选择%ld张照片",(long)selectImageCount];
+    self.selectImageLabel.text = [NSString stringWithFormat:@" 已选择%ld张照片",(long)selectImageCount];
 }
 
 - (UIButton *)commitBtn

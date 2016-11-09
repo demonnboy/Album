@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import <Photos/Photos.h>
-#import "PhotoAblumVC.h"
 #import "AlbumCollectionViewController.h"
 #import "PhotoManager.h"
 @interface ViewController ()<AlbumCollectionViewControllerDelegate>
@@ -19,26 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"照片多选";
     // Do any additional setup after loading the view, typically from a nib.
-    PHFetchResult<PHAssetCollection *> *assetCollections = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
-    for (PHAssetCollection *assetCollection in assetCollections) {NSLog(@"%@",assetCollection.localizedTitle);}
     
 }
 
 - (IBAction)switchVC:(id)sender
 {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    AlbumCollectionViewController *vc = [[AlbumCollectionViewController alloc] initWithCollectionViewLayout:layout];
-    vc.delegate = self;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
+    [[PhotoManager shareInstance] pushPhotoVC:self delegate:self];
 }
 
 - (void)albumCollectionViewController:(AlbumCollectionViewController *)albumVC imageArray:(NSMutableArray<UIImage *> *)imagesArray
 {
     NSLog(@"%@",imagesArray);
-    [albumVC dismissViewControllerAnimated:YES completion:nil];
+    
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"你选择了%lu张照片",(unsigned long)imagesArray.count] message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
     [alert show];

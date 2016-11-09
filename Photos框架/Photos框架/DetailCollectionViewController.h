@@ -8,16 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AlbumInfo.h"
+#import "ParentCollectionViewController.h"
 @class BottomView;
 @class ImageModel;
-#define kScreen [UIScreen mainScreen].bounds
-
 
 @protocol DetailCollectionViewControllerDelegate <NSObject>
 - (void)commiteBnt:(NSMutableArray<UIImage *> *)imagesArray;
 @end
 
-@interface DetailCollectionViewController : UICollectionViewController
+@interface DetailCollectionViewController : ParentCollectionViewController
 @property(strong, nonatomic) AlbumInfo *albumInfo;
 @property(assign, nonatomic) id<DetailCollectionViewControllerDelegate>a_delegate;
 @end

@@ -25,12 +25,8 @@ static NSString * const reuseIdentifier = @"Cell";
         self.title = @"相簿";
         [self.collectionView reloadData];
     }];
-    
-    self.collectionView.alwaysBounceVertical = YES;
+
     [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     UIBarButtonItem *leftBar = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelBtnClick)];
     self.navigationItem.rightBarButtonItem = leftBar;
 }
@@ -88,6 +84,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)commiteBnt:(NSMutableArray<UIImage *> *)imagesArray
 {
+    [self dismissViewControllerAnimated:YES completion:nil];
     [self.delegate albumCollectionViewController:self imageArray:imagesArray];
 }
 

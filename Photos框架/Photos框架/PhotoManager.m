@@ -7,6 +7,11 @@
 //
 
 #import "PhotoManager.h"
+
+@interface PhotoManager()<UIAlertViewDelegate>
+
+@end
+
 static PhotoManager *manager;
 @implementation PhotoManager
 + (instancetype)shareInstance
@@ -69,6 +74,48 @@ static PhotoManager *manager;
         
     });
 
+}
+
+- (void)pushPhotoVC:(UIViewController *)parentVC delegate:(id<AlbumCollectionViewControllerDelegate>)delegate
+{
+    //权限检测
+    PHAuthorizationStatus photoAuthStatus = [PHPhotoLibrary authorizationStatus];
+    if (photoAuthStatus == PHAuthorizationStatusNotDetermined) {
+            //请求授权
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                if (status == PHAuthorizationStatusAuthorized) {
+                    NSLog(@"用户同意授权");
+                    [self present:parentVC delegate:delegate];
+                }else{
+                    NSLog(@"用户拒绝授权");
+                }
+            }];
+    }else if(photoAuthStatus == PHAuthorizationStatusRestricted || photoAuthStatus == PHAuthorizationStatusDenied) {
+        NSLog(@"未授权");
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"是否打开相册权限" delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
+        [alertView show];
+    }else{
+        NSLog(@"已授权");
+        [self present:parentVC delegate:delegate];
+       
+    }
+}
+
+- (void)present:(UIViewController *)parentVC delegate:(id<AlbumCollectionViewControllerDelegate>)delegate
+{
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    AlbumCollectionViewController *vc = [[AlbumCollectionViewController alloc] initWithCollectionViewLayout:layout];
+    vc.delegate = delegate;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [parentVC presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
+    }
 }
 
 @end
